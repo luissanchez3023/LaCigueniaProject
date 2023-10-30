@@ -1,0 +1,43 @@
+<section  class="room row_evenly inherit col_17">
+    <div class="h_10 row_center">
+        <div class="col_17 bg_color_one title">
+            <h1 class="size_3 text_center">{{textTitle}}</h1>
+        </div>
+    </div>
+    <form (ngSubmit)="createExpenditure()" [formGroup]="expensiveForm" class="col_17 border row_between room py_1">
+        <div class="col_17 col_between">
+            <div class="col_5 row_center">
+                <label class="size_2 pb_1">{{textInvoice}}</label>
+                <input type="number" class="input size_1" placeholder="Ingresa el No de factura" formControlName="noExpensive">
+            </div>
+            <div class="col_11 row_center">
+                <label class="size_2 pb_1">{{textPlace}}</label>
+                <input type="text" class="input size_1" placeholder="Ingresa el nombre del lugar o proovedor" formControlName="placeExpensive">
+            </div>
+        </div>
+        <div class="col_17 col_between">
+            <div class="col_9 py_2">
+                <label class="size_2">{{textMethodPay}}</label>
+                <select formControlName="methodPayExpensive" name="selectedPaymentMethod" class="select col_15 size_2 text_weight">
+                    <option class="size_1" value="" disabled selected>Seleccionar Metodo</option>
+                    <option class="size_1" *ngFor="let metodo of metodosDePago" [value]="metodo">{{ metodo }}</option>
+                </select>
+            </div>
+        <div class="col_7 col_between">
+            <div class="col_12 row_center">
+                <label class="size_2">{{textValue}}</label>
+                <input type="number" class="input size_1" placeholder="$ 0" formControlName="valueExpensive">
+            </div>
+        </div>  
+        <div class="col_10 col_between">    
+            <div class="col_17 row_center">
+                <label class="size_2">{{textDescription}}</label>
+                <input type="text" class="input size_1 " placeholder="Ingresa la descripcion" formControlName="descriptionExpensive">           
+            </div>
+        </div>
+        </div>
+        <div class="col_17 col_center">
+            <button type="submit" (click)="modalEvent()" class="btn_one size_2 col_5">{{textSave}}</button>
+        </div>
+    </form>
+</section>

@@ -5,7 +5,8 @@ import { SalesValidateAccessTokenService } from '@service/sales/SalesValidateAcc
 
 const routes: Routes = [
   {path:'', component: SalesPageComponent},
-  {path:'cash-closure-page-principal', canActivate: [SalesValidateAccessTokenService], loadChildren: () => import('@module/cashclosure/cashclosure.module').then(m => m.CashclosureModule)}
+  {path:'cash-closure-page-principal', canActivate: [SalesValidateAccessTokenService], loadChildren: () => import('@module/cashclosure/cashclosure.module').then(m => m.CashclosureModule)},
+  {path:'expensive-page-principal', canActivate: [SalesValidateAccessTokenService], loadChildren: () => import('@module/expensive/expensive.module').then(m => m.ExpensiveModule)}
 ];
 
 @NgModule({

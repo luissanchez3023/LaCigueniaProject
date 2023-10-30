@@ -26,4 +26,13 @@ export class SectionTwoComponent {
       this.sendMessageOpeningBox.emit(true);
     }
   }
+
+  navigateB(){
+    const MESSAGE = this.salesAccessTokenService.salesAccessTokenGet();
+    if(MESSAGE == 'Operación exitosa'){
+      this.router.navigateByUrl('login-laciguenia/sales-page-principal/expensive-page-principal');
+    }else{
+      this.sendMessageOpeningBox.emit(true);
+    }
+  }
 }
