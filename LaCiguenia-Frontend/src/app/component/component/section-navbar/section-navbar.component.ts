@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BOXPAY, INVENTORY, PRODUCTS, SALES } from '@component/component/section-navbar/constans/section-navbar';
+import { BOXPAY, INVENTORY, PRODUCTS, SALES, SUPPLIERS } from '@component/component/section-navbar/constans/section-navbar';
 
 @Component({
   selector: 'app-section-navbar',
@@ -11,6 +11,7 @@ export class SectionNavbarComponent {
   sales = SALES;
   products = PRODUCTS;
   inventory = INVENTORY;
+  suppliers = SUPPLIERS;
 
   accessMenu: boolean = false;
 
