@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { SupplierModel } from '@commons/domains/suppplier/SupplierModel';
 import { GenericResponse } from '@commons/response/GenericResponse';
-import { TITTLE, NAME_SUPPLIER, NIT, NUMBER_PHONE, ADDRESS, EMAIL, CITY, SAVE } 
+import { TITLE, NAME_SUPPLIER, NIT, NUMBER_PHONE, ADDRESS, EMAIL, CITY, SAVE } 
 from '@module/supplier/supplier-page/component/section-one/constans/section-one';
 import { CreateSupplierUseCase } from '@repository/supplier/case/CreateSupplierUseCase';
 
@@ -16,7 +16,7 @@ export class SectionOneComponent {
   
   @Output() modalActivate = new EventEmitter<boolean>();
 
-  textTitle = TITTLE;
+  textTitle = TITLE;
   textName = NAME_SUPPLIER;
   textNit = NIT;
   textNumberPhone = NUMBER_PHONE;

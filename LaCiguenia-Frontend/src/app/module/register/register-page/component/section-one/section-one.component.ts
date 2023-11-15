@@ -34,7 +34,7 @@ export class SectionOneComponent implements OnChanges {
 
   constructor(public formulary: FormBuilder, public router: Router, private createUserUseCase: CreateUserUseCase){
     this.registerForm = formulary.group({
-      name: ['', [Validators.required]],
+      name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z\s]*$/)]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(8)]],
       confirmPassword: ['', [Validators.required, Validators.minLength(8)]]

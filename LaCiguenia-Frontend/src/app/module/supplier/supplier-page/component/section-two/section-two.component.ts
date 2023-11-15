@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SupplierModel } from '@commons/domains/suppplier/SupplierModel';
 import { GenericResponse } from '@commons/response/GenericResponse';
 import { TITLE, NAME_SUPPLIER, NIT_RUT, CITY, NUMBER_PHONE, OPTIONS } 
@@ -36,7 +36,7 @@ export class SectionTwoComponent {
 
   modalDelete(index: number){
     this.SendSupplierId.emit(this.supplierModel[index].supplierId);
-    this.modalActivateTwo.emit(true);
+    this.modalActivateThree.emit(true);
   }
 
   ngOnInit(): void {
