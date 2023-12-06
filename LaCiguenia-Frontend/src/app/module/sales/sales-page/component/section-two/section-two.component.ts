@@ -35,4 +35,12 @@ export class SectionTwoComponent {
       this.sendMessageOpeningBox.emit(true);
     }
   }
+   navigateByClosingHistory(){
+    const MESSAGE = this.salesAccessTokenService.salesAccessTokenGet();
+    if(MESSAGE == 'Operación exitosa'){
+      this.router.navigateByUrl('login-laciguenia/sales-page-principal/cashclosing-history-page-principal');
+    }else{
+      this.sendMessageOpeningBox.emit(true);
+    }
+  }
 }

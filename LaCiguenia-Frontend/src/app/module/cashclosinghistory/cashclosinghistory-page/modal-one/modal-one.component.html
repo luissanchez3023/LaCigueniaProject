@@ -1,0 +1,72 @@
+<section class="col_center item_center inherit bg_color_black z_index">
+    <div class="col_10 room border h_70 row_evenly bg_color_white">
+        <div class="col_17 bg_color_one title col_5">
+            <div class="col_17 size_2">
+                <h1 class="size_3 text_center">{{textTitle}}</h1>
+            </div>
+        </div>
+        <div class="col_17 col_center">
+            <div class="col_14 col_center p_one">
+                <div class="col_2 text_center row_center">
+                    <h3 class="size_1">{{textNumber}}</h3>
+                    <h3 class="size_1 text_color_one">{{cashClosure[0].cashClosureNumber}}</h3>
+                </div>
+                <div class="col_7 text_center row_center">
+                    <h3 class="size_1">{{textDate}}</h3>
+                    <h3 class="size_1 text_color_one">{{cashClosure[0].cashClosureDate}}</h3>
+                </div>
+                <div class="col_7 text_center row_center">
+                    <h3 class="size_1">{{textStorageName}}</h3>
+                    <h3 class="size_1 text_color_one">{{cashClosure[0].cashCloseStore}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col_17 border_special">
+            <div class="col_17 col_center p_one">
+                <div class="col_7 text_center row_center">
+                    <h3 class="col_8 size_1">{{textAmount}}</h3>
+                    <h3 class="col_8 size_1 text_color_one">{{cashClosure[0].cashClosureId}}</h3>
+                </div>
+                <div class="col_6 text_center row_center">
+                    <h3 class="col_9 size_1">{{textMethodPay}}</h3>
+                    <h3 class="col_8 size_1 text_color_one">{{methodPaymentSales[0].paymentMethodName}}</h3>
+                </div>
+                <div class="col_4 text_center row_center">
+                    <h3 class="col_6 size_1">{{textValue}}</h3>
+                    <h3 class="col_6 size_1 text_color_one">{{cashClosure[0].cashClosureTotalCashBox}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col_17">
+            <div class="col_15 col_center p_one">
+                <div class="col_13 text_center row_center">
+                    <h3 class="col_8 size_1">{{textPlaceSupplier}}</h3>
+                    <h3 class="col_8 size_1 text_color_one">{{cashClosure[0].cashClosureNumber}}</h3>
+                </div>
+                <div class="col_5 text_center row_center">
+                    <h3 class="col_8 size_1">{{textTotal}}</h3>
+                    <h3 class="col_8 size_1 text_color_one">{{cashClosure[0].cashClosureTotalExpense}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col_17 border_special">
+            <div class="col_17 col_center p_one">
+                <div class="col_7 text_center row_center">
+                    <h3 class="col_8 size_1">{{textTotalOpening}}</h3>
+                    <h3 class="col_8 size_1 text_color_one">{{cashClosure[0].cashClosureTotalOpeningBox}}</h3>
+                </div>
+                <div class="col_5 text_center row_center">
+                    <h3 class="col_8 size_1">{{textTotalSales}}</h3>
+                    <h3 class="col_8 size_1 text_color_one">{{methodPaymentSales[0].totalSales}}</h3>
+                </div>
+                <div class="col_5 text_center row_center">
+                    <h3 class="col_9 size_1">{{textClosingBox}}</h3>
+                    <h3 class="col_8 size_1 text_color_one">{{cashClosure[0].cashClosureTotalClosure}}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col_17 col_center">
+            <button type="submit" (click)="modalEvent()" class="btn_one size_2 col_8">{{textDone}}</button>
+        </div>
+    </div>
+</section>

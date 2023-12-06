@@ -1,0 +1,35 @@
+<section class="room row_evenly py_2 col_17">
+    <div class="row_center py_2">
+        <div class="col_17 bg_color_one title">
+            <h1 class="size_3 text_center">{{textTitle}}</h1>
+        </div>
+    </div>
+    <div class="col_17 border">
+        <div class="col_17 row_between px_2">
+            <table class="size_1 col_17">
+                <thead>
+                    <tr>
+                        <th class="col_1">{{textNumber}}</th>
+                        <th class="col_2">{{textDate}}</th>
+                        <th class="col_4">{{textNameStorage}}</th>
+                        <th class="col_3">{{textTotalClosing}}</th>
+                        <th class="col_2">{{textOption}}</th>
+                    </tr>
+                </thead>
+            </table>
+                <div class="col_17 col_between item_center" *ngFor="let cashClosingItem of cashClosingHistoryModel; let i = index">
+                    <div class="col_1 size_1 text_center text_color_two">{{cashClosingItem.closingId}}</div>
+                    <div class="col_2 size_1 text_center text_color_two">{{cashClosingItem.closingDate}}</div>
+                    <div class="col_4 size_1 text_center text_color_two">{{cashClosingItem.closingNameStorage}}</div>
+                    <div class="col_2 size_1 text_center text_color_two">$ {{cashClosingItem.closingTotalValue | number}}</div>
+                    <div class="col_2 text_center text_color_two col_evenly pt_1">
+                        <button class="btn_one" (click)="modalEvent(i)">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="svg_width" fill="" viewBox="0 0 16 16">
+                                <path d="M4.5 1A1.5 1.5 0 0 0 3 2.5V3h4v-.5A1.5 1.5 0 0 0 5.5 1h-1zM7 4v1h2V4h4v.882a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V13H9v-1.5a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5V13H1V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V4h4zM1 14v.5A1.5 1.5 0 0 0 2.5 16h3A1.5 1.5 0 0 0 7 14.5V14H1zm8 0v.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5V14H9zm4-11H9v-.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5V3z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

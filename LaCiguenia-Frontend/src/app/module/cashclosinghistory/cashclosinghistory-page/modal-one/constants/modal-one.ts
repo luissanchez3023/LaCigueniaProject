@@ -1,0 +1,14 @@
+export const TITLE = "Visualiza el Detallado de Cierre de Caja";
+export const NUMBER = "No.";
+export const DATE = "Fecha";
+export const STORAGE_NAME = "Nombre del Almacén";
+export const AMOUNT = "Cantidad";
+export const METHOD_PAY = "Métodos de Pago";
+export const VALUE = "Valor";
+export const PLACE_SUPPLIER = "Lugar o Proveedor";
+export const METHOD_PAY_SECOND = "Método de Pago";
+export const TOTAL = "Total";
+export const TOTAL_OPENING = "Total Apertura";
+export const TOTAL_SALES = "Total Ventas";
+export const CLOSING_BOX = "Cierre de Caja";
+export const DONE = "ACEPTAR";
